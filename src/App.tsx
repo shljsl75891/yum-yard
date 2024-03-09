@@ -1,5 +1,11 @@
+import HomePage from "./pages/HomePage";
+
 const App: React.FC = () => {
-  return <h1>Hello World</h1>;
+  return (
+    <>
+      <HomePage />
+    </>
+  );
 };
 
 export default App;
