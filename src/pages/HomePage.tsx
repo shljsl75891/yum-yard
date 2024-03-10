@@ -24,9 +24,13 @@ const HomePage: React.FC = () => {
     <>
       <Header />
       <div className="m-4 p-4 flex gap-5 flex-wrap">
-        {restaurantData?.map((data) => {
-          return <RestaurantCard key={data?.imgId} data={data} />;
-        })}
+        {isLoading ? (
+          <ShimmerUI length={21} />
+        ) : (
+          filteredRestaurants?.map((data) => (
+            <RestaurantCard key={data?.imgId} data={data} />
+          ))
+        )}
       </div>
     </>
   );
