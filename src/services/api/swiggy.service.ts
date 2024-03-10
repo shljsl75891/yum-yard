@@ -14,10 +14,10 @@ export class SwiggyService {
   }
 
   async fetchData() {
-    const response = await fetch(this.apiUrl);
+    const response = await fetch(`https://proxy.cors.sh/${this.apiUrl}`);
     const data = await response.json();
     const restaurantData =
-      data?.data?.cards?.[4]?.card?.card?.gridElements?.infoWithStyle
+      data?.data?.cards?.[1]?.card?.card?.gridElements?.infoWithStyle
         ?.restaurants;
     return restaurantData;
   }

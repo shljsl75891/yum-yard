@@ -24,7 +24,7 @@ const HomePage: React.FC = () => {
     <>
       <Header />
       <div className="m-4 p-4 flex gap-5 flex-wrap">
-        {restaurantData.map((data) => {
+        {restaurantData?.map((data) => {
           return <RestaurantCard key={data?.imgId} data={data} />;
         })}
       </div>
