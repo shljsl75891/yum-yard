@@ -7,7 +7,7 @@ export interface IRestaurantData {
   distance: number;
   estimatedDelieveryTime: string;
   name: string;
-  rating: string;
+  rating: number;
   discount: string;
   cuisines: Array<string>;
   address: string;
