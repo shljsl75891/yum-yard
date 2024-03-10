@@ -39,7 +39,9 @@ const RestaurantCard: React.FC<RestaurantCardProps> = (props) => {
         <p className="text-sm">{`(${distance} km)`}</p>
       </div>
       <p className="text-sm text-gray-800 font-medium">{cuisines.join(", ")}</p>
-      <p className="text-md font-medium">near {address}</p>
+      {address && (
+        <p className="text-sm text-orange-800 font-bold">Near {address}</p>
+      )}
     </div>
   );
 };
